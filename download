@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>心心｜從想法，到完成。 —— 教育 × 社群 × AI × 視覺設計整合</title>
+<meta name="description" content="心心｜暖心轉譯者。教育品牌的內容代操夥伴，提供社群內容經營、圖文設計 × 影音剪輯、活動行銷與內容包裝服務。">
+
+<!-- ============================================================
+   SEO / Open Graph 預留區（V1 尚未填入正式內容，未來擴充時啟用）
+   <meta property="og:title" content="">
+   <meta property="og:description" content="">
+   <meta property="og:image" content="">
+   <meta name="google-site-verification" content="">
+   ============================================================ -->
+
+<link rel="icon" href="assets/images/logo-placeholder.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+
+<!-- ============================================================
+   Google Analytics 預留區（V1 不啟用）
+   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+   ============================================================ -->
+</head>
+<body>
+
+<!-- ============ Navigation ============ -->
+<header class="nav" id="nav">
+  <div class="nav__inner container">
+    <a href="#home" class="nav__logo" aria-label="心心 品牌首頁">
+      <img src="assets/images/logo-placeholder.svg" alt="心心 Logo" width="120" height="36">
+    </a>
+
+    <nav class="nav__links" id="navLinks">
+      <a href="#home" class="nav__link" data-nav>Home</a>
+      <a href="#about" class="nav__link" data-nav>About</a>
+      <a href="#services" class="nav__link" data-nav>Services</a>
+      <a href="#portfolio" class="nav__link" data-nav>Portfolio</a>
+      <a href="#contact" class="nav__link nav__link--cta" data-nav>Contact</a>
+    </nav>
+
+    <button class="nav__toggle" id="navToggle" aria-label="開啟選單" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ Hero ============ -->
+  <section class="hero" id="home">
+    <div class="container hero__grid">
+      <div class="hero__text reveal">
+        <p class="eyebrow">教育 × 社群行銷 × AI × 視覺設計整合者</p>
+        <h1 class="hero__title">從想法，<br>到完成。</h1>
+        <p class="hero__subtitle">教育 × 社群 × AI × 視覺設計整合</p>
+        <div class="hero__cta">
+          <a href="#portfolio" class="btn btn--primary">查看作品</a>
+          <a href="#contact" class="btn btn--outline">聯絡合作</a>
+        </div>
+      </div>
+
+      <!-- 人物形象：小尺寸裝飾性元素，非版面主視覺。data-mood 對應 js/main.js 的 PORTRAIT_MOODS，
+           未來放入不同表情/手勢圖檔即可依區塊自動切換，找不到對應檔案時 fallback 回預設圖。 -->
+      <figure class="brand-avatar reveal" data-mood="greeting" aria-hidden="true">
+        <img src="assets/images/portrait-placeholder.svg" alt="" width="220" height="220" class="brand-avatar__img">
+      </figure>
+    </div>
+    <div class="scroll-hint" aria-hidden="true"><span></span></div>
+  </section>
+
+  <!-- ============ About ============ -->
+  <section class="about" id="about">
+    <div class="container about__grid">
+      <div class="about__text reveal">
+        <p class="eyebrow">About</p>
+        <h2 class="section-title">
+          關於我 — 品牌標題預留
+          <span class="brand-avatar brand-avatar--inline" data-mood="explain" aria-hidden="true">
+            <img src="assets/images/portrait-placeholder.svg" alt="" width="72" height="72" class="brand-avatar__img">
+          </span>
+        </h2>
+        <p class="about__lead">
+          這裡是簡介假文。Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          之後將替換為正式的自我介紹內容，說明教育背景、專長與服務理念。
+        </p>
+        <p class="about__body">
+          品牌理念假文區塊。Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          此區塊預留給品牌故事、核心價值與服務對象說明，未來將依正式素材調整版面配置。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Services ============ -->
+  <section class="services" id="services">
+    <div class="container">
+      <p class="eyebrow center">Services</p>
+      <h2 class="section-title center">服務項目</h2>
+
+      <!-- 內容依報價單「教育品牌內容轉譯員」三大服務類別，價目暫不上架 -->
+      <div class="services__grid">
+        <article class="card reveal">
+          <div class="card__icon">
+            <svg viewBox="0 0 48 48" width="32" height="32" aria-hidden="true"><circle cx="24" cy="16" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10 40c0-9 6-16 14-16s14 7 14 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3 class="card__title">社群內容經營<span class="card__title-sub">FB / IG / Threads</span></h3>
+          <p class="card__desc">企劃主題、撰寫文案、建立品牌風格。</p>
+        </article>
+
+        <article class="card reveal">
+          <div class="card__icon">
+            <svg viewBox="0 0 48 48" width="32" height="32" aria-hidden="true"><rect x="9" y="9" width="30" height="30" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="19" cy="20" r="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 32l8-8 6 6 10-10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3 class="card__title">圖文設計 × 影音剪輯</h3>
+          <p class="card__desc">將零散素材整理成有感、有溫度的內容。</p>
+        </article>
+
+        <article class="card reveal">
+          <div class="card__icon">
+            <svg viewBox="0 0 48 48" width="32" height="32" aria-hidden="true"><rect x="8" y="10" width="32" height="24" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 18h32M17 34v4M31 34v4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3 class="card__title">活動行銷與內容包裝</h3>
+          <p class="card__desc">園遊會、校園活動、親子活動——放大亮點與故事。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Portfolio ============ -->
+  <section class="portfolio" id="portfolio">
+    <div class="container">
+      <p class="eyebrow center">Portfolio</p>
+      <h2 class="section-title center">精選作品</h2>
+
+      <div class="portfolio__grid" id="portfolioGrid">
+        <!-- 12 組作品卡片預留位置，未來以真實素材取代 -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Contact ============ -->
+  <section class="contact" id="contact">
+    <div class="container contact__inner">
+      <figure class="brand-avatar brand-avatar--center reveal" data-mood="wave" aria-hidden="true">
+        <img src="assets/images/portrait-placeholder.svg" alt="" width="88" height="88" class="brand-avatar__img">
+      </figure>
+      <p class="eyebrow center">Contact</p>
+      <h2 class="section-title center">一起把想法，變成完成。</h2>
+      <p class="contact__lead">歡迎透過以下方式與我聯絡，討論合作的可能性。</p>
+
+      <div class="contact__links">
+        <a href="mailto:hello@example.com" class="contact__link">
+          <span class="contact__icon" aria-hidden="true">✉</span> Email
+        </a>
+        <a href="#" class="contact__link" target="_blank" rel="noopener">
+          <span class="contact__icon" aria-hidden="true">f</span> Facebook
+        </a>
+        <a href="#" class="contact__link" target="_blank" rel="noopener">
+          <span class="contact__icon" aria-hidden="true">◎</span> Instagram
+        </a>
+        <a href="#" class="contact__link" target="_blank" rel="noopener">
+          <span class="contact__icon" aria-hidden="true">@</span> Threads
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ Footer ============ -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <img src="assets/images/logo-placeholder.svg" alt="心心 Logo" width="100" height="30" class="footer__logo">
+    <p class="footer__tagline">從想法，到完成。</p>
+    <div class="footer__social">
+      <a href="#" aria-label="Facebook">f</a>
+      <a href="#" aria-label="Instagram">◎</a>
+      <a href="#" aria-label="Threads">@</a>
+    </div>
+    <p class="footer__copyright">&copy; 2026 心心. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
