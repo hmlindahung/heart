@@ -1,0 +1,6 @@
+<svg width="600" height="720" viewBox="0 0 600 720" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="720" rx="24" fill="#F5DCDD"/>
+  <circle cx="300" cy="300" r="120" fill="#FFFFFF" opacity="0.55"/>
+  <path d="M180 560c0-90 54-150 120-150s120 60 120 150" fill="#FFFFFF" opacity="0.55"/>
+  <text x="300" y="660" font-family="'Noto Sans TC', sans-serif" font-size="20" fill="#8FA893" text-anchor="middle">人物形象圖片 placeholder</text>
+</svg>
