@@ -151,7 +151,12 @@ section { padding: var(--space-xl) 0; position: relative; }
   height: 76px;
 }
 
-.nav__logo img { height: 32px; width: auto; }
+.nav__logo img {
+  height: 40px;
+  width: 40px;
+  border-radius: 10px;
+  display: block;
+}
 
 .nav__links {
   display: flex;
@@ -251,52 +256,57 @@ section { padding: var(--space-xl) 0; position: relative; }
 }
 
 /* ==========================================================================
-   Brand Avatar — 人物形象的小尺寸裝飾性元件
-   僅作為點綴使用，不佔版面主視覺；data-mood 對應 js/main.js 的
-   PORTRAIT_MOODS，用來依區塊切換表情/手勢圖檔（尚未有正式素材前皆 fallback
-   回 portrait-placeholder.svg）。
+   Brand Avatar — 人物形象的小尺寸裝飾性元件（貼紙卡樣式）
+   ---------------------------------------------------------------------
+   圖片本身內建對話框文字與完整構圖，所以用矩形圓角「貼紙卡」呈現，
+   而不是圓形裁切（圓形會切掉對話框文字）。僅作點綴，不佔版面主格。
+   data-mood 對應 js/main.js 的 PORTRAIT_MOODS，找不到對應圖檔時
+   會自動 fallback 回 portrait-placeholder.svg，不會破版。
    ========================================================================== */
 .brand-avatar {
-  --avatar-size: 92px;
   position: relative;
-  width: var(--avatar-size);
-  height: var(--avatar-size);
+  width: var(--avatar-w, 150px);
   flex-shrink: 0;
 }
 .brand-avatar::before {
   content: '';
   position: absolute;
-  inset: -10%;
+  inset: 6% -8% -8% 8%;
   background: var(--c-sage-tint);
-  border-radius: 50%;
+  border-radius: var(--radius-md);
+  transform: rotate(-4deg);
   z-index: 0;
 }
 .brand-avatar__img {
   position: relative;
   z-index: 1;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-md);
   box-shadow: var(--shadow-soft);
   transition: transform var(--dur-mid) var(--ease);
 }
-.brand-avatar:hover .brand-avatar__img { transform: scale(1.05) rotate(-3deg); }
+.brand-avatar:hover .brand-avatar__img { transform: scale(1.03) rotate(-1.5deg); }
 
-/* Hero：小徽章，浮貼在標題區右上角，不佔版面主格 */
-.hero__grid .brand-avatar {
-  --avatar-size: 108px;
+/* Hero：小徽章，貼在標題區下方，不佔版面主格 */
+.brand-avatar--hero {
+  --avatar-w: 168px;
   margin-top: var(--space-md);
   align-self: flex-start;
 }
 
-/* About：與標題並排的小圓點綴 */
-.brand-avatar--inline {
-  --avatar-size: 56px;
+/* About：貼在文字區右上角的小點綴 */
+.brand-avatar--about {
+  --avatar-w: 128px;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
-/* Contact：置中的小圓點綴 */
-.brand-avatar--center {
+/* Contact：置中的小點綴 */
+.brand-avatar--contact {
+  --avatar-w: 116px;
   margin: 0 auto var(--space-sm);
 }
 
@@ -326,19 +336,13 @@ section { padding: var(--space-xl) 0; position: relative; }
 .about { background: var(--c-white); }
 
 .about__grid {
-  display: flex;
-  justify-content: center;
-}
-
-.about__text {
+  position: relative;
   max-width: 680px;
   margin: 0 auto;
+  padding-top: var(--space-lg);
 }
-.about__text .section-title {
-  display: flex;
-  align-items: center;
-  gap: var(--space-sm);
-}
+
+.about__text { max-width: 100%; }
 
 .about__lead {
   font-size: 1.1rem;
@@ -534,7 +538,10 @@ section { padding: var(--space-xl) 0; position: relative; }
   text-align: center;
   gap: var(--space-sm);
 }
-.footer__logo { filter: brightness(0) invert(1); opacity: 0.9; }
+.footer__logo {
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+}
 .footer__tagline { font-weight: 500; color: var(--c-white); }
 .footer__social {
   display: flex;
@@ -574,7 +581,7 @@ section { padding: var(--space-xl) 0; position: relative; }
 }
 
 body.is-loaded .hero__text,
-body.is-loaded .hero__grid .brand-avatar {
+body.is-loaded .brand-avatar--hero {
   opacity: 1;
   transform: translateY(0);
 }
@@ -588,7 +595,14 @@ body.is-loaded .hero__grid .brand-avatar {
   .hero__grid { text-align: center; align-items: center; }
   .hero__text { max-width: 100%; margin: 0 auto; }
   .hero__cta { justify-content: center; }
-  .hero__grid .brand-avatar { align-self: center; }
+  .brand-avatar--hero { align-self: center; }
+
+  .about__grid { padding-top: var(--space-xl); }
+  .brand-avatar--about {
+    position: static;
+    margin: 0 auto var(--space-md);
+  }
+  .about__text { text-align: center; }
 
   .portfolio__grid { grid-template-columns: repeat(2, 1fr); }
 }

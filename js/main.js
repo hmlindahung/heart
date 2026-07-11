@@ -9,8 +9,8 @@
      0. 人物形象表情/手勢切換（Brand Avatar）
      ---------------------------------------------------------
      .brand-avatar 只是版面上的小尺寸點綴，不是主視覺。
-     data-mood 對應下方 PORTRAIT_MOODS 的檔名，未來只要把對應表情/手勢的
-     圖檔放進 assets/images/portrait/ 資料夾，網站就會自動依區塊切換；
+     data-mood 對應下方 PORTRAIT_MOODS 的檔名，圖檔內建對話框文字，
+     所以用貼紙卡呈現（見 style.css），不會被裁切。
      圖檔還沒補齊前，onerror 會自動 fallback 回預設的 portrait-placeholder.svg，
      不會破版。
   --------------------------------------------------------- */
